@@ -6,7 +6,7 @@ memes = vk.get_photo_links(config.cb_id)
 cats = vk.get_photo_links(config.cats_id)
 
 
-def vk_group_photo(links):
+def photo(links):
     return links[random.randint(0, 999)]
 
 
