@@ -1,0 +1,138 @@
+INFO | Bot: Test [@test11109_bot] | 2022-05-05 14:02:33,016 | aiogram | 362
+WARNING | Updates were skipped successfully. | 2022-05-05 14:02:33,177 | aiogram | 358
+INFO | Start polling. | 2022-05-05 14:02:33,332 | aiogram.dispatcher.dispatcher | 358
+INFO | @Pavel_qr: '/start' | 2022-05-05 14:02:35,974 | BOT_MIDL | 59
+INFO | @Pavel_qr: 'Погода' | 2022-05-05 14:02:39,473 | BOT_MIDL | 59
+INFO | @Pavel_qr: 'Санкт-Петербург, Россия' | 2022-05-05 14:02:42,033 | BOT_MIDL | 59
+INFO | Stop polling... | 2022-05-05 14:07:34,123 | aiogram.dispatcher.dispatcher | 433
+WARNING | Goodbye! | 2022-05-05 14:07:34,123 | aiogram | 329
+INFO | Bot: Test [@test11109_bot] | 2022-05-05 14:15:36,089 | aiogram | 362
+WARNING | Updates were skipped successfully. | 2022-05-05 14:15:36,189 | aiogram | 358
+INFO | Start polling. | 2022-05-05 14:15:36,261 | aiogram.dispatcher.dispatcher | 358
+INFO | @Pavel_qr: '/' | 2022-05-05 14:35:10,411 | BOT_MIDL | 59
+INFO | @Pavel_qr: '/folder' | 2022-05-05 14:35:16,433 | BOT_MIDL | 59
+INFO | Stop polling... | 2022-05-05 14:36:22,987 | aiogram.dispatcher.dispatcher | 433
+WARNING | Goodbye! | 2022-05-05 14:36:22,987 | aiogram | 329
+INFO | Bot: Test [@test11109_bot] | 2022-05-05 14:36:30,840 | aiogram | 362
+WARNING | Updates were skipped successfully. | 2022-05-05 14:36:30,950 | aiogram | 358
+INFO | Start polling. | 2022-05-05 14:36:31,018 | aiogram.dispatcher.dispatcher | 358
+INFO | @Pavel_qr: '/folder' | 2022-05-05 14:36:34,517 | BOT_MIDL | 59
+INFO | Pavel_qr: view_673875556 | 2022-05-05 14:36:36,230 | BOT_MIDL | 64
+INFO | @Pavel_qr: '/folder' | 2022-05-05 14:36:55,188 | BOT_MIDL | 59
+INFO | Pavel_qr: view_673875556 | 2022-05-05 14:36:57,638 | BOT_MIDL | 64
+ERROR | Task exception was never retrieved
+future: <Task finished name='Task-25' coro=<Dispatcher._process_polling_updates() done, defined at /home/pavel/working_directory/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=WrongFileIdentifier('Wrong file identifier/http url specified')> | 2022-05-05 14:36:57,814 | asyncio | 1744
+Traceback (most recent call last):
+  File "/home/pavel/working_directory/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/pavel/working_directory/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/pavel/working_directory/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/pavel/working_directory/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+  File "/home/pavel/working_directory/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/pavel/working_directory/bots/mybot/handlers_user.py", line 162, in view_files
+    await funcs[file.file_type](file.tg_id, reply_markup=keyboards.file(file.file_id))
+  File "/home/pavel/working_directory/venv/lib/python3.10/site-packages/aiogram/types/message.py", line 460, in answer_photo
+    return await self.bot.send_photo(
+  File "/home/pavel/working_directory/venv/lib/python3.10/site-packages/aiogram/bot/bot.py", line 527, in send_photo
+    result = await self.request(api.Methods.SEND_PHOTO, payload, files)
+  File "/home/pavel/working_directory/venv/lib/python3.10/site-packages/aiogram/bot/base.py", line 231, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/home/pavel/working_directory/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/home/pavel/working_directory/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "/home/pavel/working_directory/venv/lib/python3.10/site-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.WrongFileIdentifier: Wrong file identifier/http url specified
+INFO | @Pavel_qr: 'Погода' | 2022-05-05 14:37:18,509 | BOT_MIDL | 59
+INFO | @Pavel_qr: 'Санкт-Петербург, Россия' | 2022-05-05 14:37:20,683 | BOT_MIDL | 59
+INFO | @Pavel_qr: None | 2022-05-05 14:38:13,310 | BOT_MIDL | 59
+INFO | @Pavel_qr: 'Крестики-нолики' | 2022-05-05 14:39:56,433 | BOT_MIDL | 59
+INFO | Pavel_qr: board_0_2 | 2022-05-05 14:39:59,839 | BOT_MIDL | 64
+INFO | Pavel_qr: board_2_0 | 2022-05-05 14:40:04,280 | BOT_MIDL | 64
+INFO | Pavel_qr: board_2_2 | 2022-05-05 14:40:05,498 | BOT_MIDL | 64
+INFO | Pavel_qr: board_2_1 | 2022-05-05 14:40:06,419 | BOT_MIDL | 64
+INFO | Pavel_qr: start | 2022-05-05 14:40:07,982 | BOT_MIDL | 64
+INFO | @Pavel_qr: 'Крестики-нолики' | 2022-05-05 14:40:10,002 | BOT_MIDL | 59
+INFO | Pavel_qr: board_0_0 | 2022-05-05 14:40:11,649 | BOT_MIDL | 64
+INFO | Pavel_qr: board_2_2 | 2022-05-05 14:40:12,875 | BOT_MIDL | 64
+INFO | Pavel_qr: board_2_0 | 2022-05-05 14:40:14,135 | BOT_MIDL | 64
+INFO | Pavel_qr: board_2_1 | 2022-05-05 14:40:15,742 | BOT_MIDL | 64
+INFO | Pavel_qr: ttt_end_1_2 | 2022-05-05 14:40:34,084 | BOT_MIDL | 64
+INFO | Pavel_qr: ttt_end_0_1 | 2022-05-05 14:40:35,588 | BOT_MIDL | 64
+INFO | Pavel_qr: ttt_end_1_1 | 2022-05-05 14:40:36,434 | BOT_MIDL | 64
+INFO | Stop polling... | 2022-05-05 14:56:36,855 | aiogram.dispatcher.dispatcher | 433
+WARNING | Goodbye! | 2022-05-05 14:56:36,856 | aiogram | 329
+INFO | Bot: Test [@test11109_bot] | 2022-05-05 14:56:46,692 | aiogram | 362
+WARNING | Updates were skipped successfully. | 2022-05-05 14:56:46,812 | aiogram | 358
+INFO | Start polling. | 2022-05-05 14:56:46,920 | aiogram.dispatcher.dispatcher | 358
+INFO | @Pavel_qr: 'Крестики-нолики' | 2022-05-05 14:56:51,723 | BOT_MIDL | 59
+INFO | Pavel_qr: board_0_0 | 2022-05-05 14:56:53,407 | BOT_MIDL | 64
+INFO | Pavel_qr: board_2_2 | 2022-05-05 14:56:54,740 | BOT_MIDL | 64
+INFO | Pavel_qr: board_0_2 | 2022-05-05 14:56:56,478 | BOT_MIDL | 64
+INFO | Pavel_qr: board_1_2 | 2022-05-05 14:56:58,942 | BOT_MIDL | 64
+INFO | Pavel_qr: ttt | 2022-05-05 14:57:00,788 | BOT_MIDL | 64
+INFO | Stop polling... | 2022-05-05 14:57:13,685 | aiogram.dispatcher.dispatcher | 433
+WARNING | Goodbye! | 2022-05-05 14:57:13,685 | aiogram | 329
+INFO | Bot: Test [@test11109_bot] | 2022-05-05 14:57:16,697 | aiogram | 362
+WARNING | Updates were skipped successfully. | 2022-05-05 14:57:16,802 | aiogram | 358
+INFO | Start polling. | 2022-05-05 14:57:16,918 | aiogram.dispatcher.dispatcher | 358
+INFO | Pavel_qr: ttt | 2022-05-05 14:57:18,080 | BOT_MIDL | 64
+INFO | Pavel_qr: board_0_0 | 2022-05-05 14:57:19,890 | BOT_MIDL | 64
+INFO | Pavel_qr: board_2_2 | 2022-05-05 14:57:21,560 | BOT_MIDL | 64
+INFO | Pavel_qr: board_2_0 | 2022-05-05 14:57:23,203 | BOT_MIDL | 64
+INFO | Pavel_qr: board_2_1 | 2022-05-05 14:57:24,532 | BOT_MIDL | 64
+INFO | Pavel_qr: ttt | 2022-05-05 14:57:26,076 | BOT_MIDL | 64
+INFO | Pavel_qr: board_1_1 | 2022-05-05 14:57:28,151 | BOT_MIDL | 64
+INFO | Pavel_qr: board_0_1 | 2022-05-05 14:57:30,675 | BOT_MIDL | 64
+INFO | Pavel_qr: board_2_1 | 2022-05-05 14:57:31,200 | BOT_MIDL | 64
+INFO | Pavel_qr: board_2_0 | 2022-05-05 14:57:34,361 | BOT_MIDL | 64
+INFO | Pavel_qr: board_1_2 | 2022-05-05 14:57:36,704 | BOT_MIDL | 64
+INFO | Stop polling... | 2022-05-05 14:57:42,468 | aiogram.dispatcher.dispatcher | 433
+WARNING | Goodbye! | 2022-05-05 14:57:42,469 | aiogram | 329
+WARNING | Goodbye! | 2022-05-06 10:13:19,543 | aiogram | 329
+INFO | Bot: Test [@test11109_bot] | 2022-05-06 10:13:52,197 | aiogram | 362
+WARNING | Updates were skipped successfully. | 2022-05-06 10:13:52,313 | aiogram | 358
+INFO | Start polling. | 2022-05-06 10:13:52,558 | aiogram.dispatcher.dispatcher | 358
+INFO | Stop polling... | 2022-05-06 10:15:25,139 | aiogram.dispatcher.dispatcher | 433
+WARNING | Goodbye! | 2022-05-06 10:15:25,140 | aiogram | 329
+INFO | Bot: Test [@test11109_bot] | 2022-05-06 10:15:28,153 | aiogram | 362
+WARNING | Updates were skipped successfully. | 2022-05-06 10:15:28,262 | aiogram | 358
+INFO | Start polling. | 2022-05-06 10:15:28,636 | aiogram.dispatcher.dispatcher | 358
+INFO | Stop polling... | 2022-05-06 10:17:28,395 | aiogram.dispatcher.dispatcher | 433
+WARNING | Goodbye! | 2022-05-06 10:17:28,396 | aiogram | 329
+INFO | Bot: Test [@test11109_bot] | 2022-05-06 10:17:31,943 | aiogram | 362
+WARNING | Updates were skipped successfully. | 2022-05-06 10:17:32,049 | aiogram | 358
+INFO | Start polling. | 2022-05-06 10:17:32,473 | aiogram.dispatcher.dispatcher | 358
+INFO | Stop polling... | 2022-05-06 10:17:46,268 | aiogram.dispatcher.dispatcher | 433
+WARNING | Goodbye! | 2022-05-06 10:17:46,268 | aiogram | 329
+INFO | Bot: Test [@test11109_bot] | 2022-05-06 10:17:50,337 | aiogram | 362
+WARNING | Updates were skipped successfully. | 2022-05-06 10:17:50,436 | aiogram | 358
+INFO | Start polling. | 2022-05-06 10:17:50,749 | aiogram.dispatcher.dispatcher | 358
+INFO | Stop polling... | 2022-05-06 10:18:06,716 | aiogram.dispatcher.dispatcher | 433
+WARNING | Goodbye! | 2022-05-06 10:18:06,717 | aiogram | 329
+INFO | Bot: Test [@test11109_bot] | 2022-05-06 10:18:09,692 | aiogram | 362
+WARNING | Updates were skipped successfully. | 2022-05-06 10:18:09,794 | aiogram | 358
+INFO | Start polling. | 2022-05-06 10:18:10,101 | aiogram.dispatcher.dispatcher | 358
+INFO | Stop polling... | 2022-05-06 10:18:20,841 | aiogram.dispatcher.dispatcher | 433
+WARNING | Goodbye! | 2022-05-06 10:18:20,841 | aiogram | 329
+INFO | Bot: Test [@test11109_bot] | 2022-05-06 10:18:23,510 | aiogram | 362
+WARNING | Updates were skipped successfully. | 2022-05-06 10:18:23,612 | aiogram | 358
+WARNING | Goodbye! | 2022-05-06 10:18:23,841 | aiogram | 329
+INFO | Bot: Test [@test11109_bot] | 2022-05-06 10:18:38,690 | aiogram | 362
+WARNING | Updates were skipped successfully. | 2022-05-06 10:18:38,878 | aiogram | 358
+INFO | Start polling. | 2022-05-06 10:18:39,231 | aiogram.dispatcher.dispatcher | 358
+INFO | Stop polling... | 2022-05-06 10:22:15,148 | aiogram.dispatcher.dispatcher | 433
+WARNING | Goodbye! | 2022-05-06 10:22:15,148 | aiogram | 329
+INFO | Bot: Test [@test11109_bot] | 2022-05-06 10:22:18,678 | aiogram | 362
+WARNING | Updates were skipped successfully. | 2022-05-06 10:22:18,805 | aiogram | 358
+INFO | Start polling. | 2022-05-06 10:22:19,144 | aiogram.dispatcher.dispatcher | 358
+INFO | Stop polling... | 2022-05-06 10:23:02,375 | aiogram.dispatcher.dispatcher | 433
+WARNING | Goodbye! | 2022-05-06 10:23:02,375 | aiogram | 329
+INFO | Bot: Test [@test11109_bot] | 2022-05-06 10:23:05,469 | aiogram | 362
+WARNING | Updates were skipped successfully. | 2022-05-06 10:23:05,583 | aiogram | 358
+WARNING | Goodbye! | 2022-05-06 10:23:05,779 | aiogram | 329
